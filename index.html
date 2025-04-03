@@ -1,40 +1,129 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/solarized.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/solarized-dark.css">
+  <style>
+    mark {
+      background: #268bd2
+    }
+  </style>
+</head>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-auto-animate>
+        <h3>OpenTelemetry в мире JavaScript:</h3>
+      </section>
+      <section data-auto-animate>
+        <h3>OpenTelemetry в мире JavaScript:</h3>
+        <small>
+          как приручить observability в веб-приложениях
+        </small>
+      </section>
+      <section data-auto-animate>
+        <h2>Observability?</h2>
+      </section>
+      <section data-auto-animate>
+        <h2>Observability?</h2>
+        <p>Observability is a measure of how well internal states of a system can be inferred from
+          knowledge of its external outputs.</p>
+      </section>
+      <section data-auto-animate>
+        <h2>Observability?</h2>
+        <p>Observability is a measure of how well <mark>internal states</mark> of a system can be inferred from
+          knowledge of its <mark>external outputs.</mark></p>
+      </section>
+      <section>
+        <h2>
+          Аттрибут качества
+        </h2>
+        <p>
+          Ключевая характеристика, которая определяют уровень качества программного обеспечения
+        </p>
+      </section>
+      <section>
+        <p>Observability - это про продакшн</p>
+      </section>
+      <section data-auto-animate>
+        <h2>Зачем оно мне нужно!?</h2>
+      </section>
+      <section data-auto-animate>
+        <h2>Зачем оно мне нужно!?</h2>
+        <ul>
+          <li>Решение проблем</li>
+          <li>Понимание системы</li>
+          <li>Стабильность</li>
+          <li>Производительность</li>
+        </ul>
+      </section>
+      <section data-auto-animate>
+        <h3>Три столпа Observability</h3>
+      </section>
+      <section data-auto-animate>
+        <h3>Три столпа Observability</h3>
+        <ol>
+          <li>Логи</li>
+          <li>Трейсы</li>
+          <li>Метрики</li>
+        </ol>
+      </section>
+      <section>
+        &mdash; У меня нет никаких проблем! Я использую логи и дебаг!
+      </section>
+      <section data-auto-animate>
+        <h2>Когда логов недостаточно</h2>
+      </section>
+      <section data-auto-animate>
+        <h2 style="font-size: 1em">Когда логов недостаточно</h2>
+        <pre><code data-trim data-noescape data-line-numbers class="typescript">//пример с текстовыми логами</code>
+        </pre>
+      </section>
+      <section>
+        <h2 style="font-size: 1em">Добавим информации!</h2>
+        <pre><code data-trim data-noescape data-line-numbers class="typescript">//пример с текстовыми логами</code>
+        </pre>
+      </section>
+      <section>
+        <h2 style="font-size: 1em">А что если логов слишком много?</h2>
+        <pre><code data-trim data-noescape data-line-numbers class="typescript">//пример с текстовыми логами</code>
+        </pre>
+      </section>
+      <section>
+        <h2>А что если логи лежат на разных сервисах</h2>
+      </section>
+      <section>
+        <h2>Сравним структурированные логи</h2>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+      backgroundTransition: 'none',
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
 </html>

@@ -4,6 +4,7 @@
  */
 @import url(./fonts/league-gothic/league-gothic.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url("https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 /**
  * Solarized colors by Ethan Schoonover
  */
@@ -17,18 +18,18 @@ html * {
  *********************************************/
 :root {
   --r-background-color: #fdf6e3;
-  --r-main-font: Lato, sans-serif;
+  --r-main-font: Lora, sans-serif;
   --r-main-font-size: 40px;
   --r-main-color: #657b83;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: League Gothic, Impact, sans-serif;
+  --r-heading-font: Carlito, Impact, sans-serif;
   --r-heading-color: #586e75;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
-  --r-heading-text-transform: uppercase;
+  --r-heading-text-transform: none;
   --r-heading-text-shadow: none;
-  --r-heading-font-weight: normal;
+  --r-heading-font-weight: 700;
   --r-heading1-text-shadow: none;
   --r-heading1-size: 3.77em;
   --r-heading2-size: 2.11em;

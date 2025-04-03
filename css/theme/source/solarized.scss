@@ -15,7 +15,7 @@
 // Include theme-specific fonts
 @import url(./fonts/league-gothic/league-gothic.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-
+@import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 /**
  * Solarized colors by Ethan Schoonover
@@ -55,6 +55,11 @@ $selectionBackgroundColor: $magenta;
 $overlayElementBgColor: 0, 0, 0;
 $overlayElementFgColor: 240, 240, 240;
 
+$headingFont: 'Carlito', Impact, sans-serif;
+$headingFontWeight: 700;
+$headingTextTransform: none;
+
+$mainFont: 'Lora', sans-serif;
 // Background generator
 // @mixin bodyBackground() {
 // 	@include radial-gradient( rgba($base3,1), rgba(lighten($base3, 20%),1) );
