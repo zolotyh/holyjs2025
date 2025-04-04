@@ -88,18 +88,70 @@
           <h2 class="r-fit-text">Будем считать, что мы фулстеки</h2>
         </section>
         <section>
-          <pre><code>
-const express = require('express')
-const app = express()
-const port = 3000
+          <pre><code data-line-numbers data-ln-start-from="6" style="font-size: 0.9em" data-trim class="js">
+...
+const checkout = async () =&gt; {
+  if (Math.random() &gt; 0.01) return;
+  throw new Error(&quot;checkout error&quot;);
+};
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get(&quot;/checkout&quot;, async (_, res) =&gt; {
+  console.log(&quot;checkout&quot;);
+  try {
+    await checkout();
+  } catch (e) {
+    console.log(e);
+    return res.send({ error: true });
+  }
+  res.send({ success: true });
+});
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Когда я разрабатываю, мне этого достаточно</h2>
+          <pre><code data-line-numbers="1-11|1|2" data-trim>
+Error: checkout error
+    at checkout (/.../examples/1-simple-express/index.js:9:9)
+    at /.../examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/.../examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/.../examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/.../examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/.../examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/.../examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /.../examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/.../examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/.../examples/1-simple-express/node_modules/router/index.js:291:5)
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Когда я разрабатываю, мне этого достаточно</h2>
+          <pre><code data-line-numbers="4" data-ln-start-from="6" style="font-size: 0.9em" data-trim class="js">
+...
+const checkout = async () =&gt; {
+  if (Math.random() &gt; 0.01) return;
+  throw new Error(&quot;checkout error&quot;);
+};
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+app.get(&quot;/checkout&quot;, async (_, res) =&gt; {
+  console.log(&quot;checkout&quot;);
+  try {
+    await checkout();
+  } catch (e) {
+    console.log(e);
+    return res.send({ error: true });
+  }
+  res.send({ success: true });
+});
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Добавим данных в вывод?</h2>
+          <pre><code data-trim>
+const log = (msg) =&gt; {
+  console.log(`[${new Date().toISOString()}] ${msg}`);
+};
+
+log(&quot;my log message&quot;);
           </code></pre>
         </section>
       </div>
