@@ -1,129 +1,199 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>reveal.js</title>
 
-  <title>reveal.js</title>
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/solarized.css" />
 
-  <link rel="stylesheet" href="dist/reset.css">
-  <link rel="stylesheet" href="dist/reveal.css">
-  <link rel="stylesheet" href="dist/theme/solarized.css">
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/solarized-dark.css" />
+    <style>
+      mark {
+        background: #268bd2;
+      }
+    </style>
+  </head>
 
-  <!-- Theme used for syntax highlighted code -->
-  <link rel="stylesheet" href="plugin/highlight/solarized-dark.css">
-  <style>
-    mark {
-      background: #268bd2
-    }
-  </style>
-</head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-auto-animate>
+          <h3>OpenTelemetry в мире JavaScript:</h3>
+        </section>
+        <section data-auto-animate>
+          <h3>OpenTelemetry в мире JavaScript:</h3>
+          <small> как приручить observability в веб-приложениях </small>
+        </section>
+        <section data-auto-animate>
+          <h2>Observability?</h2>
+        </section>
+        <section data-auto-animate>
+          <h2>Observability?</h2>
+          <p>
+            Observability is a measure of how well internal states of a system
+            can be inferred from knowledge of its external outputs.
+          </p>
+        </section>
+        <section data-auto-animate>
+          <h2>Observability?</h2>
+          <p>
+            Observability is a measure of how well
+            <mark>internal states</mark> of a system can be inferred from
+            knowledge of its <mark>external outputs.</mark>
+          </p>
+        </section>
+        <section>
+          <h2>Аттрибут качества</h2>
+          <p>
+            Ключевая характеристика, которая определяют уровень качества
+            программного обеспечения
+          </p>
+        </section>
+        <section>
+          <p>Observability - это про продакшн</p>
+        </section>
+        <section data-auto-animate>
+          <h2>Зачем оно мне нужно!?</h2>
+        </section>
+        <section data-auto-animate>
+          <h2>Зачем оно мне нужно!?</h2>
+          <ul>
+            <li>Решение проблем</li>
+            <li>Понимание системы</li>
+            <li>Стабильность</li>
+            <li>Производительность</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <h3>Три столпа Observability</h3>
+        </section>
+        <section data-auto-animate>
+          <h3>Три столпа Observability</h3>
+          <ol>
+            <li>Логи</li>
+            <li>Трейсы</li>
+            <li>Метрики</li>
+          </ol>
+        </section>
+        <section>
+          &mdash; У меня нет никаких проблем! Я использую логи и дебаг!
+        </section>
+        <section data-auto-animate>
+          <h2>Про логи</h2>
+        </section>
+        <section data-auto-animate>
+          <h2 style="font-size: 1em">Про логи</h2>
+          <pre><code data-trim data-noescape data-line-numbers="1-14|1-3,8" class="typescript">
+const randomErrorFunction = () =&gt; {
+  if (Math.random() &lt; 0.01) throw new Error(&#39;Random error&#39;);
+}
 
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <section data-auto-animate>
-        <h3>OpenTelemetry в мире JavaScript:</h3>
-      </section>
-      <section data-auto-animate>
-        <h3>OpenTelemetry в мире JavaScript:</h3>
-        <small>
-          как приручить observability в веб-приложениях
-        </small>
-      </section>
-      <section data-auto-animate>
-        <h2>Observability?</h2>
-      </section>
-      <section data-auto-animate>
-        <h2>Observability?</h2>
-        <p>Observability is a measure of how well internal states of a system can be inferred from
-          knowledge of its external outputs.</p>
-      </section>
-      <section data-auto-animate>
-        <h2>Observability?</h2>
-        <p>Observability is a measure of how well <mark>internal states</mark> of a system can be inferred from
-          knowledge of its <mark>external outputs.</mark></p>
-      </section>
-      <section>
-        <h2>
-          Аттрибут качества
-        </h2>
-        <p>
-          Ключевая характеристика, которая определяют уровень качества программного обеспечения
-        </p>
-      </section>
-      <section>
-        <p>Observability - это про продакшн</p>
-      </section>
-      <section data-auto-animate>
-        <h2>Зачем оно мне нужно!?</h2>
-      </section>
-      <section data-auto-animate>
-        <h2>Зачем оно мне нужно!?</h2>
-        <ul>
-          <li>Решение проблем</li>
-          <li>Понимание системы</li>
-          <li>Стабильность</li>
-          <li>Производительность</li>
-        </ul>
-      </section>
-      <section data-auto-animate>
-        <h3>Три столпа Observability</h3>
-      </section>
-      <section data-auto-animate>
-        <h3>Три столпа Observability</h3>
-        <ol>
-          <li>Логи</li>
-          <li>Трейсы</li>
-          <li>Метрики</li>
-        </ol>
-      </section>
-      <section>
-        &mdash; У меня нет никаких проблем! Я использую логи и дебаг!
-      </section>
-      <section data-auto-animate>
-        <h2>Когда логов недостаточно</h2>
-      </section>
-      <section data-auto-animate>
-        <h2 style="font-size: 1em">Когда логов недостаточно</h2>
-        <pre><code data-trim data-noescape data-line-numbers class="typescript">//пример с текстовыми логами</code>
+server.get(&#39;/problem&#39;, async (request, reply) =&gt; {
+  console.log(&#39;Получен запрос на /problem&#39;);
+  try {
+    randomErrorFunction();
+    return { success: true };
+  } catch (err) {
+    console.error(&#39;Ошибка!&#39;, err);
+    reply.status(500).send({ error: &#39;Internal Server Error&#39; });
+}});
+          </code></pre>
+        </section>
+        <section>
+          <h2>Ошибка при отладке</h2>
+          <pre>
+          <code data-trim data-noescape data-line-numbers="1-6|2-3" class="plain">
+Ошибка! Error: Random error
+at randomErrorFunction (file:.../1-logging/server.mjs:7:35)
+at Object.&lt;anonymous&gt; (file:.../1-logging/server.mjs:14:5)
+at preHandlerCallbackInner (.../1-logging/node_modules/fastify/lib/handleRequest.js:161:24)
+at preHandlerCallback (.../1-logging/node_modules/fastify/lib/handleRequest.js:129:5)
+at validationCompleted (.../1-logging/node_modules/fastify/lib/handleRequest.js:119:5)
+          </code>
         </pre>
-      </section>
-      <section>
-        <h2 style="font-size: 1em">Добавим информации!</h2>
-        <pre><code data-trim data-noescape data-line-numbers class="typescript">//пример с текстовыми логами</code>
-        </pre>
-      </section>
-      <section>
-        <h2 style="font-size: 1em">А что если логов слишком много?</h2>
-        <pre><code data-trim data-noescape data-line-numbers class="typescript">//пример с текстовыми логами</code>
-        </pre>
-      </section>
-      <section>
-        <h2>А что если логи лежат на разных сервисах</h2>
-      </section>
-      <section>
-        <h2>Сравним структурированные логи</h2>
-      </section>
+        </section>
+        <section data-background-video="video/logs.mp4"></section>
+        <section data-auto-animate>
+          <h2>Исправляем</h2>
+          <pre><code data-line-numbers="1-12|3,9" data-trim data-noescape>
+// Правильно: используем встроенный логгер
+fastify.get(&#39;/fixed&#39;, async (request, reply) =&gt; {
+  fastify.log.info(&#39;Получен запрос на /fixed&#39;);
+  try {
+    // Имитация ошибки
+    const result = someUndefinedFunction();
+    return { success: true };
+  } catch (err) {
+    fastify.log.error({ err }, &#39;Произошла ошибка&#39;);
+    reply.status(500).send({ error: &#39;Error&#39; });
+  }
+});
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Исправляем</h2>
+          <pre><code data-trim class="js">fastify.log.error({ err }, 'Произошла ошибка');</code></pre>
+        </section>
+        <section>
+          <h3>Добавляем к каждому логу userId</h3>
+          <pre><code data-trim class="ts">
+fastify.addHook(&#39;onRequest&#39;, (request, reply, done) =&gt; {
+  // Extract userId (assume it&#39;s in a header or JWT token)
+  const userId = request.headers[&#39;x-user-id&#39;] || &#39;anonymous&#39;; 
+
+  // Attach userId to logger
+  request.log = request.log.child({ userId });
+
+  done();
+});
+          </code></pre>
+          <p class="fragment">Можно добавить любую метаинформацию</p>
+        </section>
+        <section data-auto-animate>А что если у нас много логов!?</section>
+        <section data-auto-animate>
+          А что если у нас <span>очень</span> много логов!?
+        </section>
+        <section>
+          <h2 class="r-fit-text">Google Docs, создание файла</h2>
+          <img style="max-height: 40vh" src="img/docs.png" alt="" />
+          <p>Кажется, что здесь будет очень много логов</p>
+        </section>
+        <section data-auto-animate>
+          <h2>request-id</h2>
+        </section>
+        <section data-auto-animate>
+          <h2>request-id</h2>
+          <ol>
+            <li>У каждого сервиса есть метка</li>
+            <li>Если метки нет, то создай</li>
+            <li>Если метка создана, то все запросы помечаются меткой</li>
+          </ol>
+        </section>
+      </div>
     </div>
-  </div>
 
-  <script src="dist/reveal.js"></script>
-  <script src="plugin/notes/notes.js"></script>
-  <script src="plugin/markdown/markdown.js"></script>
-  <script src="plugin/highlight/highlight.js"></script>
-  <script>
-    // More info about initialization & config:
-    // - https://revealjs.com/initialization/
-    // - https://revealjs.com/config/
-    Reveal.initialize({
-      hash: true,
-      backgroundTransition: 'none',
-      // Learn about plugins: https://revealjs.com/plugins/
-      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
-    });
-  </script>
-</body>
-
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        backgroundTransition: "none",
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
