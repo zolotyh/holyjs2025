@@ -34,6 +34,12 @@
             как приручить observability в веб-приложениях
           </p>
         </section>
+        <section>
+          <img src="img/logo.svg" alt="МойОфис" />
+        </section>
+        <section>
+          <img src="img/holyjs.svg" alt="HolyJS" />
+        </section>
         <section>OpenTelemetry &mdash; это про Observability</section>
         <section data-auto-animate>
           <h2 class="r-fit-text">Observability</h2>
@@ -613,7 +619,7 @@ graph TD
     UserService["User Service"]
 
     UserRequest --> | Без метки | CheckoutService
-    CheckoutService --> | requestId | UserService
+    CheckoutService --> | traceId | UserService
 
         </pre
             >
@@ -642,8 +648,8 @@ graph TD
     UserService["User Service"]
 
     UserRequest --> | Без метки | CheckoutService
-    CheckoutService --> | requestId | UserService
-    UserService --> | requestId + ошибка | CheckoutService
+    CheckoutService --> | traceId | UserService
+    UserService --> | traceId + ошибка | CheckoutService
 
 
         </pre
@@ -665,24 +671,117 @@ graph TD
 
 graph TD
     style UserRequest fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
-    style UserResponce fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style UserResponse fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
     style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
     style UserService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
 
     UserRequest@{ shape: circle, label: "Request" }
-    UserResponce@{ shape: circle, label: "Responce" }
+    UserResponse@{ shape: circle, label: "Response" }
     CheckoutService["Checkout Service"]
     UserService["User Service"]
 
     UserRequest --> | Без метки | CheckoutService
-    CheckoutService --> | requestId | UserService
-    UserService --> | requestId + ошибка | CheckoutService
-    CheckoutService --> | requestId + ошибка | UserResponce
+    CheckoutService --> | traceId | UserService
+    UserService --> | traceId + ошибка | CheckoutService
+    CheckoutService --> | traceId + ошибка | UserResponse
 
 
         </pre
             >
           </div>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Допустим баг в UserService</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style UserRequest fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style UserResponse fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style UserService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+
+    UserRequest@{ shape: circle, label: "Request" }
+    UserResponse@{ shape: circle, label: "Response" }
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+    NotificationService["Notification Service"]
+    InventoryService["Inventory Service"]
+    ShippingService["Shipping Service"]
+
+    UserRequest --> | Без метки | CheckoutService
+    CheckoutService --> | traceId | UserService
+    UserService --> | traceId + ошибка | CheckoutService
+    CheckoutService --> | traceId + ошибка | UserResponse
+
+
+        </pre
+            >
+          </div>
+          <pre class="fragment"><code data-trim class="sql">
+SELECT *
+FROM logs
+WHERE traceId = 'abc123-def456-ghi789'
+</code></pre>
+        </section>
+        <section></section>
+        <section>А что если, мы хотим знать какой путь прошел запрос?</section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">
+            Немного контекста и мы можем построить вот это
+          </h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "default", "themeVariables": {
+  "background": "#fdf6e3",
+  "textColor": "#657b83",
+  "primaryColor": "#eee8d5",
+  "secondaryColor": "#fdf6e3",
+  "tertiaryColor": "#eee8d5",
+  "sectionBkgColor": "#eee8d5",
+  "taskBkgColor": "#93a1a1",
+  "taskTextColor": "#fdf6e3",
+  "taskBorderColor": "#586e75",
+  "sectionBkgColor2": "#eee8d5",
+  "taskBkgColor2": "#b58900",
+  "taskTextColor2": "#fdf6e3",
+  "taskBorderColor2": "#586e75"
+}}}%%
+
+gantt
+    dateFormat  YYYY-MM-DD HH:mm:ss
+    axisFormat %H:%M:%S
+    
+    section Запрос
+    Получение запроса от пользователя          :a1, 2025-04-05 10:00:00, 1s
+    
+    section Checkout Service
+    Обработка запроса                          :a2, after a1, 3s
+    Запрос данных пользователя                 :a3, after a2, 1s
+    
+    section User Service
+    Проверка данных пользователя               :a4, after a3, 2s
+    Возврат ошибки                             :a5, after a4, 1s
+    
+    section Ответ
+    Формирование ответа с ошибкой              :a6, after a5, 2s
+    Отправка ответа пользователю               :a7, after a6, 1s
+        </pre
+            >
+          </div>
+          <p>
+            <a href="https://www.w3.org/TR/trace-context/"
+              >www.w3.org/TR/trace-context</a
+            >
+          </p>
         </section>
       </div>
     </div>
