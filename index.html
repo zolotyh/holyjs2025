@@ -144,6 +144,7 @@ app.get(&quot;/checkout&quot;, async (_, res) =&gt; {
 });
           </code></pre>
         </section>
+        <section>Пример</section>
         <section data-auto-animate>
           <h2 class="r-fit-text">Добавим данных в вывод?</h2>
           <pre><code data-trim>
@@ -154,6 +155,535 @@ const log = (msg) =&gt; {
 log(&quot;my log message&quot;);
           </code></pre>
         </section>
+        <section data-auto-animate>
+          <h2 style="text-decoration: line-through" class="r-fit-text">
+            Добавим данных в вывод?
+          </h2>
+          <pre><code data-trim>
+const log = (msg) =&gt; {
+  console.log(`[${new Date().toISOString()}] ${msg}`);
+};
+
+log(&quot;my log message&quot;);
+          </code></pre>
+          <p>Не наш выбор</p>
+        </section>
+        <section>
+          <h2 class="r-fit-text">Используем готовый логгер</h2>
+          <pre><code data-trim class="js">
+// logger.js
+model.exports = require('pino')()
+          </code></pre>
+          <pre class="fragment"><code data-trim class="js">
+// добавим middleware
+app.use((req, res, next) =&gt; {
+  req.logger = require(&#39;./logger.js&#39;)
+  next();
+});
+          </code></pre>
+        </section>
+        <section>
+          <img src="img/logs_logger.png" alt="JSON логи" />
+        </section>
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Сделаем вывод красивым</h2>
+          <pre><code data-trim>
+module.exports = require(&#39;pino&#39;)({
+  transport: {
+    target: &quot;pino-pretty&quot;,
+    options: {
+      colorize: true,
+    },
+  },
+});
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <pre><code data-trim>
+module.exports = require(&#39;pino&#39;)({
+  transport: {
+    target: &quot;pino-pretty&quot;,
+    options: {
+      colorize: true,
+    },
+  },
+});
+          </code></pre>
+          <img src="img/logs_logger_better.png" alt="JSON логи в строки" />
+        </section>
+        <section data-transition="slide none">
+          <h2 class="r-fit-text">Структурированное логгирование</h2>
+          <pre><code data-trim>
+app.use((req, res, next) =&gt; {
+  req.logger = require(&#39;./logger.js&#39;);
+  next();
+});
+          </code></pre>
+        </section>
+        <section data-transition="none none">
+          <h2 class="r-fit-text">Структурированное логгирование</h2>
+          <pre><code data-trim>
+app.use((req, res, next) =&gt; {
+  req.logger = require(&#39;./logger.js&#39;).child({ foo: &#39;bar&#39; });
+  next();
+});
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Структурированное логгирование</h2>
+          <pre><code data-trim>
+app.use((req, res, next) =&gt; {
+  req.logger = require(&#39;./logger.js&#39;)
+                 .child({ 
+                   'user-id': req.headers['x-user-id']; 
+                 });
+  next();
+});
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Структурированное логгирование</h2>
+          <pre><code data-trim>
+app.use((req, res, next) =&gt; {
+  req.logger = require(&#39;./logger.js&#39;)
+                 .child({ 
+                   'user-id': req.headers['x-user-id']; 
+
+                   // НИКОГДА ТАК НЕ ДЕЛАЙТЕ!
+                   // НЕЛЬЗЯ ЛОГГИРОВАТЬ ВСЕ ПОДРЯД
+                   ...req
+                 });
+  next();
+});
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Наш код &mdash; часть картины</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor":  "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#93a1a1",
+  "lineColor": "#586e75",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "monospace"
+}}}%%
+
+graph TD
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    CheckoutService["**Checkout Service**"]
+        </pre
+            >
+          </div>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Наш код &mdash; часть картины</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+
+    CheckoutService --> UserService
+        </pre
+            >
+          </div>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Наш код &mdash; часть картины</h2>
+          <div class="mermaid">
+            <pre>
+
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+    NotificationService["Notification Service"]
+
+    CheckoutService --> UserService
+    CheckoutService --> NotificationService
+        </pre
+            >
+          </div>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Наш код &mdash; часть картины</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+    NotificationService["Notification Service"]
+
+    CheckoutService --> UserService
+    CheckoutService --> NotificationService
+        </pre
+            >
+          </div>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Наш код &mdash; часть картины</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+    NotificationService["Notification Service"]
+    InventoryService["Inventory Service"]
+
+    CheckoutService --> UserService
+    CheckoutService --> NotificationService
+    CheckoutService --> InventoryService
+        </pre
+            >
+          </div>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Наш код &mdash; часть картины</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+    NotificationService["Notification Service"]
+    InventoryService["Inventory Service"]
+    ShippingService["Shipping Service"]
+
+    CheckoutService --> UserService
+    CheckoutService --> NotificationService
+    CheckoutService --> InventoryService
+    CheckoutService --> ShippingService
+        </pre
+            >
+          </div>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Наш код &mdash; часть картины</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+    NotificationService["Notification Service"]
+    InventoryService["Inventory Service"]
+    ShippingService["Shipping Service"]
+
+    CheckoutService --> UserService
+    CheckoutService --> NotificationService
+    CheckoutService --> InventoryService
+    CheckoutService --> ShippingService
+        </pre
+            >
+          </div>
+          <p>Проверять логи каждого сервиса &mdash; боль</p>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Добавим централизованное логгирование</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style LoggingService fill:#6c71c4,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+    NotificationService["Notification Service"]
+    InventoryService["Inventory Service"]
+    ShippingService["Shipping Service"]
+    LoggingService["Central Logging Service"]
+
+    CheckoutService --> UserService
+    CheckoutService --> NotificationService
+    CheckoutService --> InventoryService
+    CheckoutService --> ShippingService
+
+    CheckoutService --> LoggingService
+    UserService --> LoggingService
+    NotificationService --> LoggingService
+    InventoryService --> LoggingService
+    ShippingService --> LoggingService
+
+        </pre
+            >
+          </div>
+        </section>
+        <section>Проблема в том, что мы не показали все стрелки</section>
+        <section data-transition="none">
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style LoggingService fill:#6c71c4,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+    NotificationService["Notification Service"]
+    InventoryService["Inventory Service"]
+    ShippingService["Shipping Service"]
+    LoggingService["Central Logging Service"]
+
+    CheckoutService --> UserService
+    CheckoutService --> NotificationService
+    CheckoutService --> InventoryService
+    CheckoutService --> ShippingService
+
+    UserService --> NotificationService
+    InventoryService --> ShippingService
+    ShippingService --> UserService
+
+    %% Ошибки с описанием
+    UserService -->|AuthError: InvalidToken| CheckoutService
+    NotificationService -->|SendError: SMTPFailure| CheckoutService
+    InventoryService -->|StockError: OutOfStock| CheckoutService
+    ShippingService -->|AddressError: InvalidAddress| CheckoutService
+
+    InventoryService -->|ShipCheckError: NoCarrierAvailable| UserService
+    ShippingService -->|StockSyncError: Timeout| InventoryService
+    UserService -->|DataFetchError: UserNotFound| ShippingService
+
+    %% Логирование
+    CheckoutService --> LoggingService
+    UserService --> LoggingService
+    NotificationService --> LoggingService
+    InventoryService --> LoggingService
+    ShippingService --> LoggingService
+
+        </pre
+            >
+          </div>
+          <h2 class="r-fit-text fragment">
+            Давайте думать как ограничить граф
+          </h2>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Допустим баг в UserService</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style LoggingService fill:#6c71c4,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+
+    CheckoutService --> UserService
+
+
+    %% Ошибки с описанием
+    UserService -->|AuthError: 500| CheckoutService
+
+    %% Логирование
+    CheckoutService --> LoggingService
+    UserService --> LoggingService
+        </pre
+            >
+          </div>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Допустим баг в UserService</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style UserRequest fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+
+    UserRequest@{ shape: circle, label: "Request" }
+    CheckoutService["Checkout Service"]
+
+    UserRequest --> |Без метки| CheckoutService
+
+        </pre
+            >
+          </div>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Допустим баг в UserService</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style UserRequest fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+
+    UserRequest@{ shape: circle, label: "Request" }
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+
+    UserRequest --> | Без метки | CheckoutService
+    CheckoutService --> | requestId | UserService
+
+        </pre
+            >
+          </div>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Допустим баг в UserService</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style UserRequest fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style UserService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+
+    UserRequest@{ shape: circle, label: "Request" }
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+
+    UserRequest --> | Без метки | CheckoutService
+    CheckoutService --> | requestId | UserService
+    UserService --> | requestId + ошибка | CheckoutService
+
+
+        </pre
+            >
+          </div>
+        </section>
+        <section data-transition="none">
+          <h2 class="r-fit-text">Допустим баг в UserService</h2>
+          <div class="mermaid">
+            <pre>
+%%{init: {"theme": "base", "themeVariables": {
+  "primaryColor": "#268bd2",
+  "primaryTextColor": "#fdf6e3",
+  "primaryBorderColor": "#268bd2",
+  "lineColor": "#268bd2",
+  "tertiaryColor": "#002b36",
+  "fontFamily": "Carlito"
+}}}%%
+
+graph TD
+    style UserRequest fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style UserResponce fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style CheckoutService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+    style UserService fill:#d33682,stroke:#657b83,stroke-width:0px,color:#fdf6e3
+
+    UserRequest@{ shape: circle, label: "Request" }
+    UserResponce@{ shape: circle, label: "Responce" }
+    CheckoutService["Checkout Service"]
+    UserService["User Service"]
+
+    UserRequest --> | Без метки | CheckoutService
+    CheckoutService --> | requestId | UserService
+    UserService --> | requestId + ошибка | CheckoutService
+    CheckoutService --> | requestId + ошибка | UserResponce
+
+
+        </pre
+            >
+          </div>
+        </section>
       </div>
     </div>
 
@@ -161,6 +691,7 @@ log(&quot;my log message&quot;);
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
     <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/mermaid/mermaid.js"></script>
     <script>
       // More info about initialization & config:
       // - https://revealjs.com/initialization/
@@ -169,7 +700,7 @@ log(&quot;my log message&quot;);
         hash: true,
         backgroundTransition: "none",
         // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMermaid],
       });
     </script>
   </body>

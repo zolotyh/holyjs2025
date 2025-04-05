@@ -10,7 +10,7 @@ app.use((req, res, next) => {
 });
 
 const checkout = async () => {
-  if (Math.random() > 0.01) return;
+  if (Math.random() > 0.1) return;
 
   throw new Error("checkout error");
 };
