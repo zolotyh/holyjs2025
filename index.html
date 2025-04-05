@@ -732,12 +732,49 @@ FROM logs
 WHERE traceId = 'abc123-def456-ghi789'
 </code></pre>
         </section>
-        <section></section>
+        <section>
+          <h2 class="r-fit-text">
+            Прокидываем traceId при помощи asyncLocalStorage
+          </h2>
+          <pre><code data-line-numbers="1-16|2|6|8,11|9|13-14" data-trim class="javascript">
+...
+const asyncLocalStorage = new AsyncLocalStorage();
+
+// Middleware для Express: создаёт traceId и сохраняет его в AsyncLocalStorage
+function traceMiddleware(req, res, next) {
+  const traceId = req.headers['x-trace-id'] || uuidv4();
+
+  asyncLocalStorage.run({ traceId }, () => {
+    res.setHeader('x-trace-id', traceId); // Можно возвращать traceId клиенту
+    next();
+  });
+
+// регистрируем middleware
+app.use(traceMiddleware);
+}
+...
+          </code></pre>
+        </section>
+        <section>
+          <pre><code data-trim data-line-numbers="1-13|1,12|4-5|7-9">
+const { request } = require('undici');
+
+async function tracedRequest(url, options = {}) {
+  const store = asyncLocalStorage.getStore();
+  const traceId = store?.traceId || uuidv4();
+
+  options.headers = {
+    ...options.headers,
+    'x-trace-id': traceId,
+  };
+
+  return request(url, options);
+}
+</code></pre>
+        </section>
         <section>А что если, мы хотим знать какой путь прошел запрос?</section>
         <section data-transition="none">
-          <h2 class="r-fit-text">
-            Немного контекста и мы можем построить вот это
-          </h2>
+          <h2 class="r-fit-text">Тресы, трейсы, спаны, спаны...</h2>
           <div class="mermaid">
             <pre>
 %%{init: {"theme": "default", "themeVariables": {
@@ -783,6 +820,61 @@ gantt
             >
           </p>
         </section>
+        <section data-transition="none">
+          <h5>2 заголовка</h2>
+          <p style="text-align: left">1. Заголовок traceparent</p>
+          <table>
+            <tr style="font-size: 0.8em; text-align: center">
+              <th>Version</th>
+              <th>TraceId</th>
+              <th>ParentId</th>
+              <th>TraceFlags</th>
+            </tr>
+            <tr style="font-size: 0.5em; text-align: center">
+              <td>00</td>
+              <td>0af7651916cd43dd8448eb211c80319c</td>
+              <td>b7ad6b7169203331</td>
+              <td>01</td>
+            </tr>
+          </table>
+          <div class="fragment">
+            <hr>
+            <p style="text-align: left">2. Заголовок tracestate</p>
+            key1=value1;key2=value2
+          </div>
+        </section>
+       <section data-transition="none">
+          <img src="img/1.png" alt="">
+       </section>
+       <section data-transition="none">
+          <img src="img/2.png" alt="">
+       </section>
+       <section data-transition="none">
+          <img src="img/3.png" alt="">
+       </section>
+       <section data-transition="none">
+          <img src="img/4.png" alt="">
+       </section>
+       <section data-transition="none">
+          <img src="img/5.png" alt="">
+       </section>
+      <section>
+         <p>&mdash; Чем логи отличаются от трейсов и как они соотносятся?</p>
+      </section>
+      <section data-transition="slide none">
+         <img src="img/logs_1.png" alt="">
+      </section>
+      <section data-transition="none slide">
+         <img src="img/logs_2.png" alt="">
+      </section>
+      <section data-transition="none slide">
+         <img src="img/logs_3.png" alt="">
+      </section>
+      <section>
+         <p class="r-fit-text">Не хватает метрик</p>
+      </section>
+      <section>
+      </section>
       </div>
     </div>
 
