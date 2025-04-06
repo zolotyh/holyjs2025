@@ -5,7 +5,6 @@
 
 
 // Default mixins and settings -----------------
-@use "sass:color";
 @import "../template/mixins";
 @import "../template/settings";
 // ---------------------------------------------
@@ -19,6 +18,10 @@
 /**
  * Solarized colors by Ethan Schoonover
  */
+html * {
+	color-profile: sRGB;
+	rendering-intent: auto;
+}
 
 // Solarized colors
 $base03:    #002b36;
@@ -44,7 +47,7 @@ $headingColor: $base2;
 $headingTextShadow: none;
 $backgroundColor: $base03;
 $linkColor: $blue;
-$linkColorHover: color.scale( $linkColor, $lightness: 20% );
+$linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: $magenta;
 
 // Change text colors against light slide backgrounds

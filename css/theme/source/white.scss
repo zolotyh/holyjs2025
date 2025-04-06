@@ -4,46 +4,38 @@
  * By Hakim El Hattab, http://hakim.se
  */
 
-
 // Default mixins and settings -----------------
-@use "sass:color";
 @import "../template/mixins";
 @import "../template/settings";
 // ---------------------------------------------
 
-
 // Include theme-specific fonts
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
-
-
+@import url(./fonts/work/stylesheet.css);
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #fff;
 
-$mainColor: #222;
-$headingColor: #222;
+$mainColor: rgb(68, 64, 60);
+$headingColor: rgb(68, 64, 60);
 
 $mainFontSize: 42px;
-$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFont: "Yanone Kaffeesatz", Helvetica, sans-serif;
+$headingFont: "Yanone Kaffeesatz", Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: uppercase;
-$headingFontWeight: 600;
-$linkColor: #2a76dd;
-$linkColorHover: color.scale( $linkColor, $lightness: 15% );
-$selectionBackgroundColor: color.scale( $linkColor, $lightness: 25% );
+$headingFontWeight: 800;
+$linkColor: #e1b61d;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
 
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
-$heading4Size: 1.0em;
-
-$overlayElementBgColor: 0, 0, 0;
-$overlayElementFgColor: 240, 240, 240;
+$heading4Size: 1em;
 
 // Change text colors against dark slide backgrounds
 @include dark-bg-text-color(#fff);
-
 
 // Theme template ------------------------------
 @import "../template/theme";
