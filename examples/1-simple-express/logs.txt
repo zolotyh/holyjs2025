@@ -1,0 +1,3133 @@
+application running on port 3002
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+Error: checkout error
+    at checkout (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:9:9)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/Users/zolotyh/talks/holyjs2025/examples/1-simple-express/node_modules/router/index.js:291:5)
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data
+/data

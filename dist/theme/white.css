@@ -3,6 +3,7 @@
  *
  * By Hakim El Hattab, http://hakim.se
  */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
 @import url(./fonts/work/stylesheet.css);
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
@@ -31,7 +32,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   --r-heading2-size: 1.6em;
   --r-heading3-size: 1.3em;
   --r-heading4-size: 1em;
-  --r-code-font: monospace;
+  --r-code-font: "JetBrains Mono", monospace;
   --r-link-color: #e1b61d;
   --r-link-color-dark: rgb(157.2342519685, 127.1850393701, 20.2657480315);
   --r-link-color-hover: rgb(234.5059055118, 204.1181102362, 95.9940944882);

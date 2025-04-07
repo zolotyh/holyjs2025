@@ -15,8 +15,8 @@ const checkout = async () => {
   throw new Error("checkout error");
 };
 
-app.get("/checkout", async (req, res) => {
-  req.logger.info("checkout");
+app.get("/data", async (req, res) => {
+  req.logger.info("data");
 
   try {
     await checkout();

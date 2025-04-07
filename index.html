@@ -23,7 +23,7 @@
     />
 
     <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="plugin/highlight/nnfx-dark.css" />
   </head>
   <body>
     <div class="reveal">
@@ -43,19 +43,57 @@
           <h2 class="r-fit-text">Observability</h2>
         </section>
         <section data-transition="slide none">
-          <h2>Observability (o11y)</h2>
-          <p>
-            Observability is a measure of how well internal states of a system
-            can be inferred from knowledge of its external outputs
+          <blockquote
+            style="
+              font-style: normal;
+              text-align: left;
+              border-left: 3px solid rgba(0, 0, 0, 0.8);
+              padding: 0.5em;
+              background-color: rgba(0, 0, 0, 0.1);
+            "
+          >
+            Observability is about <b>the unknown-unknowns;</b> the ability to
+            understand internal system states just by observing its outputs
+            outside.
+          </blockquote>
+          <p
+            style="
+              font-size: 0.5em;
+              text-align: right;
+              width: 70%;
+              margin: -0.3em auto 0;
+              position: relative;
+              left: 20px;
+            "
+          >
+            Charity Majors, Observability Pionerr, Co-Founder of Honeycomb.io
           </p>
         </section>
         <section data-transition="none slide">
-          <h2>Observability (o11y)</h2>
-          <p>
-            Observability is a measure of how well
-            <mark>internal states</mark> of a system can be inferred from
-            knowledge of its
-            <mark>external outputs</mark>
+          <blockquote
+            style="
+              font-style: normal;
+              text-align: left;
+              border-left: 3px solid rgba(0, 0, 0, 0.8);
+              padding: 0.5em;
+              background-color: rgba(0, 0, 0, 0.1);
+            "
+          >
+            Observability is about <b>the unknown-unknowns;</b> the ability to
+            understand <mark>internal system states</mark> just by observing its
+            <mark>outputs outside</mark>.
+          </blockquote>
+          <p
+            style="
+              font-size: 0.5em;
+              text-align: right;
+              width: 70%;
+              margin: -0.3em auto 0;
+              position: relative;
+              left: 20px;
+            "
+          >
+            Charity Majors, Observability Pionerr, Co-Founder of Honeycomb.io
           </p>
         </section>
         <section>
@@ -66,18 +104,607 @@
             a11y</small
           >
         </section>
-        <section>
-          <h2 class="r-fit-text">Зачем мне это?</h2>
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Зачем мне это нужно!?</h2>
+        </section>
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Зачем мне это нужно!?</h2>
+          <ul>
+            <li>Решение проблем</li>
+            <li>Понимание системы</li>
+            <li>Стабильность</li>
+            <li>Производительность</li>
+          </ul>
         </section>
         <section>
+          <h2 class="r-fit-text">Продакшн</h2>
+        </section>
+        <section>
+          <h2>Для разработки</h2>
           <ul>
-            <li>Проблемы на проде</li>
-            <li></li>
-            <li class="fragment">
-              Улучшение командной работы и инженерной культуры
+            <li>Отладчик</li>
+            <li>Вывод в консоль</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Код для express.js</h2>
+          <pre style="margin: 0 auto; font-size: 0.5em">
+          <code  data-line-numbers data-ln-start-from="6" data-trim data-noescape class="javascript">
+// Падает в 1% случаев
+const checkout = async () =&gt; {
+  if (Math.random() &gt; 0.01) return;
+  throw new Error(&quot;checkout error&quot;);
+};
+
+app.get(&quot;/data&quot;, async (req, res) =&gt; {
+  console.log(&quot;GET /data request received&quot;);
+
+  try {
+    await checkout();
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false });
+  }
+});
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>В случае ошибки</h2>
+          <div class="r-stack">
+            <pre
+              style="font-size: 0.5em; max-width: 70vw"
+            ><code data-line-numbers="1-11|1-3" data-line-numbers data-trim>
+Error: checkout error
+    at checkout (/.../examples/1-simple-express/index.js:9:9)
+    at /.../examples/1-simple-express/index.js:16:11
+    at Layer.handleRequest (/.../examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at next (/.../examples/1-simple-express/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/.../examples/1-simple-express/node_modules/router/lib/route.js:117:3)
+    at handle (/.../examples/1-simple-express/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/.../examples/1-simple-express/node_modules/router/lib/layer.js:152:17)
+    at /.../examples/1-simple-express/node_modules/router/index.js:295:15
+    at processParams (/.../examples/1-simple-express/node_modules/router/index.js:582:12)
+    at next (/.../examples/1-simple-express/node_modules/router/index.js:291:5)
+          </code></pre>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h2>В случае ошибки</h2>
+          <pre style="margin: 0 auto; font-size: 0.5em">
+          <code  data-line-numbers="4,11" data-ln-start-from="6" data-trim data-noescape class="text">
+// Падает в 1% случаев
+const checkout = async () =&gt; {
+  if (Math.random() &gt; 0.01) return;
+  throw new Error(&quot;checkout error&quot;);
+};
+
+app.get(&quot;/data&quot;, async (req, res) =&gt; {
+  console.log(&quot;GET /data request received&quot;);
+
+  try {
+    await checkout();
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false });
+  }
+});
+          </code></pre>
+        </section>
+        <section data-background-video="video/logs_express.mp4"></section>
+        <section data-auto-animate>
+          <h2 class="r-fit-text">Добавим данных в вывод?</h2>
+          <pre><code data-trim>
+const log = (msg) =&gt; {
+  console.log(`[${new Date().toISOString()}] ${msg}`);
+};
+
+//[2025-04-07T00:19:23.471Z] my log message
+log(&quot;my log message&quot;);
+          </code></pre>
+        </section>
+        <section data-auto-animate data-transition="slide none">
+          <h2 style="text-decoration: line-through" class="r-fit-text">
+            Добавим данных в вывод?
+          </h2>
+          <pre><code data-trim>
+const log = (msg) =&gt; {
+  console.log(`[${new Date().toISOString()}] ${msg}`);
+};
+
+//[2025-04-07T00:19:23.471Z] my log message
+log(&quot;my log message&quot;);
+          </code></pre>
+          <p>Не наш выбор</p>
+        </section>
+        <section data-transition="none slide">
+          <h2 style="text-decoration: line-through" class="r-fit-text">
+            Добавим данных в вывод?
+          </h2>
+          <pre><code data-trim>
+const log = (msg, level) =&gt; {
+  console.log(`[${new Date().toISOString()}] ${level}: ${msg}`);
+};
+
+//[2025-04-07T00:19:23.471Z] Error: my log message
+log(&quot;my log message&quot; 'Error');
+          </code></pre>
+          <p>Не наш выбор</p>
+        </section>
+        <section>
+          <pre>
+            <code data-line-numbers="1-15|7,12" class="javascript" data-trim>
+// logger.js
+module.exports = require("pino")();
+
+//index.js
+log = require("./logger");
+...
+  log.info('/data')             
+  try {
+    await checkout();
+    res.status(200).json({ success: true });
+  } catch (error) {
+    log.error({ error }, 'MySupperError');
+    res.status(500).json({ success: false });
+  }
+...
+            </code>
+          </pre>
+        </section>
+        <section>
+          <h2>string =&gt; JSON</h2>
+
+          <pre><code data-trim>
+{"level":30,"time":1743987006941,"pid":31808,"hostname":"Alexs-MacBook-Pro.local","msg":"/data"}
+{"level":30,"time":1743987006942,"pid":31808,"hostname":"Alexs-MacBook-Pro.local","msg":"success checkout"}
+{"level":30,"time":1743987006945,"pid":31808,"hostname":"Alexs-MacBook-Pro.local","msg":"/data"}
+{"level":30,"time":1743987006945,"pid":31808,"hostname":"Alexs-MacBook-Pro.local","msg":"success checkout"}
+{"level":30,"time":1743987006946,"pid":31808,"hostname":"Alexs-MacBook-Pro.local","msg":"/data"}
+{"level":30,"time":1743987006946,"pid":31808,"hostname":"Alexs-MacBook-Pro.local","msg":"success checkout"}
+{"level":30,"time":1743987006946,"pid":31808,"hostname":"Alexs-MacBook-Pro.local","msg":"/data"}
+{"level":30,"time":1743987006946,"pid":31808,"hostname":"Alexs-MacBook-Pro.local","msg":"success checkout"}
+{"level":30,"time":1743987006946,"pid":31808,"hostname":"Alexs-MacBook-Pro.local","msg":"/data"}
+{"level":30,"time":1743987006946,"pid":31808,"hostname":"Alexs-MacBook-Pro.local","msg":"success checkout"}
+{"level":30,"time":1743987006947,"pid":31808,"hostname":"Alexs-MacBook-Pro.local","msg":"/data"}
+{"level":30,"time":1743987006947,"pid":31808,"hostname":"Alexs-MacBook-Pro.local","msg":"success checkout"}
+          </code></pre>
+        </section>
+        <section>
+          <h2 class="r-fit-text">Structured logs</h2>
+        </section>
+        <section data-auto-animate>
+          <h2>Делаем красиво</h2>
+          <pre><code class="javascript" data-trim>
+module.exports = require(&quot;pino&quot;)({
+  transport: {
+    target: &quot;pino-pretty&quot;,
+    options: {
+      colorize: true,
+    },
+  },
+});
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>Делаем красиво</h2>
+          <pre><code class="javascript" data-trim>
+module.exports = require(&quot;pino&quot;)({
+  transport: {
+    target: &quot;pino-pretty&quot;,
+    options: {
+      colorize: true,
+    },
+  },
+});
+          </code></pre>
+          <pre><code class="logs" data-trim>
+[04:07:27.975] INFO (53569): success checkout
+[04:07:28.163] INFO (53569): /checkout
+[04:07:28.164] INFO (53569): success checkout
+[04:07:28.342] INFO (53569): /checkout
+[04:07:28.343] ERROR (53569): error on checkout
+    err: {
+      "type": "Error",
+      "message": "checkout error",
+      "stack":
+          Error: checkout error
+              at checkout (.../examples/2-better-logging/index.js:14:9)
+              at .../examples/2-better-logging/index.js:21:11
+              at Layer.handleRequest (.../examples/2-better-logging/node_modules/router/lib/layer.js:152:17)
+              at next (.../examples/2-better-logging/node_modules/router/lib/route.js:157:13)
+              at Route.dispatch (.../examples/2-better-logging/node_modules/router/lib/route.js:117:3)
+          </code></pre>
+
+          <img src="img/logs_logger_better.png" alt="JSON логи в строки" />
+        </section>
+        <section>
+          <h2>Добавим две middleware</h2>
+          <pre><code  class="js" data-trim>
+//ЭТО ОЧЕНЬ ПЛОХОЙ КОД, ОН НУЖЕН ДЛЯ ДЕМО. НЕ ПИШИТЕ ТАК
+app.use((req, res, next) =&gt; {
+  const id = req.headers[&quot;id&quot;] || &quot;no-id&quot;;
+  req.logger = require(&quot;./logger.js&quot;).child({ &quot;id&quot;: id });
+  next();
+});
+
+app.use((req, res, next) =&gt; {
+  const id = req.headers[&quot;id&quot;] || &quot;no-id&quot;;
+  req.axios = axios.create({headers: { id }});
+  next();
+});
+          </code></pre>
+        </section>
+        <section data-auto-animate>
+          <h2>На самом деле, все сложнее</h2>
+          <img src="img/checkout.png" alt="" />
+        </section>
+        <section data-auto-animate>
+          <h2>На самом деле, все сложнее</h2>
+          <img src="img/checkout2.png" alt="" />
+        </section>
+        <section data-auto-animate>
+          <h2>На самом деле, все сложнее</h2>
+          <img src="img/checkout3.png" alt="" />
+        </section>
+        <section data-auto-animate>
+          <h2>На самом деле, все сложнее</h2>
+          <img src="img/checkout4.png" alt="" />
+        </section>
+        <section>
+          <h2 class="r-fit-text">Centralized Log Management</h2>
+        </section>
+        <section data-auto-animate>
+          <h2>Добавим контекст</h2>
+          <img src="img/context1.png" alt="" />
+        </section>
+        <section data-auto-animate>
+          <h2>Добавим контекст</h2>
+          <img src="img/context2.png" alt="" />
+        </section>
+        <section data-auto-animate>
+          <h2>Добавим контекст</h2>
+          <img src="img/context3.png" alt="" />
+        </section>
+        <section data-transition="slide none">
+          <h2>Фильтруем по Id</h2>
+          <img src="img/table.png" alt="" />
+        </section>
+        <section data-transition="none none">
+          <h2>Фильтруем по Id</h2>
+          <img src="img/table2.png" alt="" />
+        </section>
+        <section data-transition="none slide">
+          <h2>Фильтруем по Id</h2>
+          <img src="img/table3.png" alt="" />
+        </section>
+        <section>
+          <h2 class="r-fit-text">Если подумать, то фильтрации недостаточно!</h2>
+          <h3 class="r-fit-text fragment">Я хочу знать путь</h3>
+        </section>
+        <section data-transition="none slide">
+          <h2>Строим путь</h2>
+          <img src="img/tracing1.png" alt="" />
+        </section>
+        <section data-transition="none slide">
+          <h2>Строим путь</h2>
+          <img src="img/tracing2.png" alt="" />
+        </section>
+        <section data-transition="none slide">
+          <h2>Строим путь</h2>
+          <img src="img/tracing2_1.png" alt="" />
+        </section>
+        <section data-transition="none slide">
+          <h2>Строим путь</h2>
+          <img src="img/tracing3.png" alt="" />
+        </section>
+        <section data-transition="none slide">
+          <h2>Строим путь</h2>
+          <img src="img/tracing4.png" alt="" />
+        </section>
+        <section data-transition="none slide">
+          <h2>Строим путь</h2>
+          <img src="img/tracing5.png" alt="" />
+        </section>
+        <section data-transition="none slide">
+          <h2>Строим путь</h2>
+          <img src="img/tracing6.png" alt="" />
+        </section>
+        <section data-auto-animate>
+          <h2>Tracing</h2>
+          <img style="max-height: 50vh" src="img/data.png" alt="" />
+        </section>
+        <section data-auto-animate>
+          <h2>Tracing</h2>
+          <img src="img/tracing.png" alt="" />
+        </section>
+        <section>
+          <h2>
+            <a href="https://www.w3.org/TR/trace-context/"
+              >www.w3.org/TR/trace-context</a
+            >
+          </h2>
+        </section>
+        <section data-transition="none">
+          <h2>W3C Trace Context</h2>
+          <p style="text-align: left">1. Заголовок traceparent</p>
+          <table>
+            <tr style="font-size: 0.8em; text-align: center">
+              <th>Version</th>
+              <th>TraceId</th>
+              <th>ParentId</th>
+              <th>TraceFlags</th>
+            </tr>
+            <tr style="font-size: 0.5em; text-align: center">
+              <td>00</td>
+              <td>0af7651916cd43dd8448eb211c80319c</td>
+              <td>b7ad6b7169203331</td>
+              <td>01</td>
+            </tr>
+          </table>
+          <div class="fragment">
+            <hr />
+            <p style="text-align: left">2. Заголовок tracestate</p>
+            key1=value1;key2=value2
+          </div>
+        </section>
+        <section data-auto-animate>
+          <p>&mdash; Зачем мне тогда логи, ведь есть трейсы?</p>
+        </section>
+        <section data-auto-animate>
+          <p>&mdash; Зачем мне тогда логи, ведь есть трейсы?</p>
+          <p>&mdash; Не все можно описать трейсами!</p>
+          <pre><code data-trim>
+app.listen(port, () =&gt; {
+  logger.info(`application running on port ${port}`);
+});
+          </code></pre>
+        </section>
+        <section>
+          <h2>3 Столпа Observability</h2>
+          <ul>
+            <li>Логи</li>
+            <li>Трейсы</li>
+            <li>Метрики</li>
+          </ul>
+          <p class="fragment">И все должно работать в связке</p>
+        </section>
+        <section>
+          <h2>Рекурсивный вызов функции</h2>
+          <ul>
+            <li>Метрики: Аномально высокий CPU.utilization.</li>
+            <li>Трейсы: Много вложенных spans с одинаковым именем.</li>
+            <li>Логи: "StackOverflowError in module X".</li>
+          </ul>
+          <p>→ Вывод: Бесконечная рекурсия из-за ошибки в коде.</p>
+        </section>
+        <section>
+          <h2>Проблемы с внешним API</h2>
+          <ul>
+            <li>Метрики: Рост http.client.errors у интеграции.</li>
+            <li>Трейсы: Span с status=500 при вызове стороннего сервиса.</li>
+            <li>Логи: "External API returned: Rate limit exceeded".</li>
+          </ul>
+          <p>→ Вывод: Нужно добавить retry или увеличить лимиты.</p>
+        </section>
+        <section>
+          <h2>Медленные HTTP-запросы</h2>
+          <ul>
+            <li>Метрики: Рост 99-го перцентиля времени ответа.</li>
+            <li>Трейсы: Длинный span в API-методе.</li>
+            <li>Логи: Сообщение о таймауте БД в момент замедления.</li>
+          </ul>
+          <p>→ Вывод: Проблема в запросе к медленной базе данных.</p>
+        </section>
+        <section data-background-color="#000000">
+          <h2 class="r-fit-text">А где тут OpenTelemetry!?</h2>
+        </section>
+        <section data-transition="slide none">
+          <p>
+            OpenTelemetry, also known as OTel, is a vendor-neutral open source
+            Observability framework for instrumenting, generating, collecting,
+            and exporting telemetry data such as traces, metrics, and logs.
+          </p>
+        </section>
+        <section data-transition="none slide">
+          <p>
+            OpenTelemetry, also known as OTel, is a <mark>vendor-neutral</mark> open source
+            Observability <mark>framework</mark> for instrumenting, generating, collecting,
+            and exporting telemetry data such as <mark>traces, metrics, and logs<mark>.
+          </p>
+        </section>
+        <section data-transition="slide none">
+          <h2>Что не так со схемой?</h2>
+          <img style="height: 50vh;" src="img/otel.png" alt="">
+        </section>
+        <section data-transition="none slide">
+          <h2>Что не так со схемой</h2>
+          <img style="height: 50vh;" src="img/otel1.png" alt="">
+        </section>
+        <section>Нужно решение, которые подойдет всем</section>
+        <section>
+<p>
+  OpenTelemetry (OTel) разрабатывается как open-source проект при поддержке Cloud Native Computing Foundation (CNCF), которая является частью Linux Foundation
+</p>
+          <p>Можно пройти бесплатный треннинг (<a href="https://opentelemetry.io/training/">opentelemetry.io/training</a>)</p>
+        </section>
+        <section>
+          <img src="img/otel-diagram.svg" alt="">
+        </section>
+        <section>
+          <p>Основная идея</p>
+          <img src="img/collactor.avif" alt="">
+        </section>
+        <section>
+          <p>Развиваем</p>
+          <img src="img/lg2x.avif" alt="">
+        </section>
+        <section>
+          <h2>
+            1. Receivers (Приемники)
+          </h2>
+          <ul style="font-size: 0.7em">
+            <li>
+              <b>Traces (Трейсы)</b>
+              <ul>
+                <li>otlp (OpenTelemetry Protocol)</li>
+                <li>jaeger (Jaeger-совместимый прием)</li>
+                <li>zipkin (Zipkin-совместимый прием)</li>
+                <li>kafka (получение трейсов из Kafka)</li>
+              </ul>
+            </li>
+            <li>
+              <b>Metrics (Метрики)</b>
+              <ul>
+                <li>prometheus (прием метрик в формате Prometheus)</li>
+                <li>statsd (StatsD-совместимый протокол)</li>
+                <li>hostmetrics (метрики хоста: CPU, память, диски и т. д.)</li>
+              </ul>
+            </li>
+            <li>
+              <b>Logs (Логи)</b>
+              <ul>
+                <li>fluentforward (Fluent Forward Protocol)</li>
+                <li>syslog (Syslog-совместимый прием)</li>
+                <li>filelog (чтение логов из файлов)</li>
+              </ul>
             </li>
           </ul>
         </section>
+        <section>
+          2. Processors (Процессоры)
+        </section>
+        <section>
+          <p>Получаем, преобрузуем, экспортируем</p>
+          <img src="img/rpe.avif" alt="">
+        </section>
+        <section>
+          <h2>
+            2.1 Filtering (Фильтрация)
+          </h2>
+          <h4>Что делает?</h4>
+          <ul style="font-size: 0.7em;">
+            <li>Игнорировать трейсы от определённого сервиса.</li>
+            <li>Отфильтровывать метрики с низкой ценностью.</li>
+            <li>Удалять логи, содержащие чувствительные данные</li>
+          </ul>
+          <br>
+          <br>
+          <h4>Зачем?</h4>
+          <ul style="font-size: 0.7em;">
+            <li>Уменьшение объема данных, передаваемых дальше по pipeline.</li>
+            <li>Снижение нагрузки на систему и затрат на хранение.</li>
+            <li>Удаление ненужной или избыточной информации.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>2.2 Redaction (Редактирование/Очистка)</h2>
+          <h4>Что делает?</h4>
+          <ul style="font-size: 0.7em;">
+            <li>Маскирование номеров кредитных карт в логах.</li>
+            <li>Удаление email-адресов из трейсов.</li>
+            <li>Очистка HTTP-заголовков с токенами.</li>
+          </ul>
+          <br>
+          <br>
+          <h4>Зачем?</h4>
+          <ul style="font-size: 0.7em;">
+            <li>Соответствие требованиям GDPR, HIPAA и другим стандартам безопасности.</li>
+            <li>Предотвращение утечки данных в системы мониторинга.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>2.3 Sampling (Сэмплирование)</h2>
+          <h4>Что делает?</h4>
+          <p style="font-size: 0.7em;">
+            Выбор части данных для обработки/экспорта вместо всей информации
+          </p>
+          <ul style="font-size: 0.7em;">
+            <li><b>Head-based Sampling:</b> Решение принимается в начале трейса (например, 10% трейсов).</li>
+            <li><b>Tail-based Sampling:</b> Решение принимается после анализа всего трейса (например, сохранять только трейсы с ошибками).</li>
+          </ul>
+          <br>
+          <br>
+          <h4>Зачем?</h4>
+          <ul style="font-size: 0.7em;">
+            <li>Снижение затрат на хранение и передачу данных.</li>
+            <li>Фокусировка на важных данных (ошибки, медленные запросы).</li>
+          </ul>
+        </section>
+        <section>
+          <h2>2.4 Batching (Пакетирование)</h2>
+          <h4>Что делает?</h4>
+          <p style="font-size: 0.7em;">
+            Объединение нескольких данных (например, спанов трейсов) в один пакет перед отправкой.
+          </p>
+          <ul style="font-size: 0.7em;">
+            <li>Отправлять метрики не по одной, а пачками по 1000 штук.</li>
+            <li>Группировать логи в блоки для более эффективной передачи.</li>
+          </ul>
+          <br>
+          <br>
+          <h4>Зачем?</h4>
+          <ul style="font-size: 0.7em;">
+            <li>Оптимизация сети (меньше накладных расходов на передачу).</li>
+            <li>Снижение нагрузки на систему-приёмник (например, Jaeger или Prometheus).</li>
+          </ul>
+        </section>
+        <section>
+          <h2>3. Exporters (Экспортеры)</h2>
+
+          Отправляют данные во внешние системы:
+
+          <ul style="font-size: 0.7em">
+            <li>
+              <b>Трейсы:</b>
+              <ul>
+                <li>otlp (отправка в другой Otel Collector или бэкенд)</li>
+                <li>jaeger (Jaeger)</li>
+                <li>zipkin (Zipkin)</li>
+                <li>logging (логирование данных в stdout)</li>
+              </ul>
+            </li>
+            <li>
+              <b>Метрики:</b>
+              <ul>
+                <li>prometheus (Prometheus)</li>
+                <li>datadog (DataDog)</li>
+                <li>awsemf (Amazon CloudWatch)</li>
+              </ul>
+            </li>
+            <li>
+              <b>Логи:</b>
+              <ul>
+                <li>elasticsearch (Elasticsearch)</li>
+                <li>loki (Grafana Loki)</li>
+                <li>splunk_hec (Splunk)</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Sidecar</h2>
+          <img src="img/sidecar.png" alt="">
+        </section>
+        <section>
+          <h2>Gateway</h2>
+          <img src="img/sidecar2.png" alt="">
+        </section>
+        <section>
+          <h2>Отправка данных в коллектор</h2>
+          <pre><code class="bash" data-trim>
+docker run \
+  -p 4317:4319 \
+  -p 4318:4320 \
+  -p 55679:55679 \
+  --name telemetry-collector \
+  otel/opentelemetry-collector-contrib:latest
+          </code></pre>
+          <h3>Интерфейс отладки</h3>
+          <p><a href="http://localhost:55679/debug/tracez">localhost:55679/debug/tracez</a></p>
+        </section>
+        <section></section>
       </div>
     </div>
 

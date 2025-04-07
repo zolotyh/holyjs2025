@@ -9,8 +9,8 @@ const checkout = async () => {
   throw new Error("checkout error");
 };
 
-app.get("/checkout", async (_, res) => {
-  console.log("checkout");
+app.get("/data", async (_, res) => {
+  console.log("/data");
 
   try {
     await checkout();
