@@ -1,0 +1,23 @@
+{
+  "name": "auto-no-code",
+  "version": "1.0.0",
+  "description": "js code for no code automatic instrumentation ",
+  "main": "index.js",
+  "scripts": {
+    "start": "dotenvx run -- node index.js",
+    "start-module": "dotenvx run -f .env.module -- node module.js"
+  },
+  "author": "@uncool-0x",
+  "license": "ISC",
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.39.1",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.57.0",
+    "@opentelemetry/instrumentation-express": "^0.48.0",
+    "@opentelemetry/instrumentation-http": "^0.200.0",
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pino": "^9.6.0"
+  }
+}
