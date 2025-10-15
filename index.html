@@ -704,7 +704,178 @@ docker run \
           <h3>Интерфейс отладки</h3>
           <p><a href="http://localhost:55679/debug/tracez">localhost:55679/debug/tracez</a></p>
         </section>
-        <section></section>
+        <section data-background-color="#2d292c" data-background-video="video/collector.mp4" data-background-size="contain">
+        </section>
+        <section>
+          <h2 class="r-fit-text">Инструментация и SDK</h2>
+        </section>
+        <section>
+          <h2>Инструментация</h2>
+          <pre><code data-trim class="javascript">
+//logs.js
+oldConsole = global.console.log;
+
+global.console.log = function (...args) {
+  oldConsole("====================");
+  oldConsole(...args);
+  oldConsole("====================");
+};
+          </code></pre>
+          <pre><code data-trim class="bash">
+NODE_OPTIONS="--require ./log.js" node hello.js
+          </code></pre>
+          <pre><code>
+console.log('test')
+#====================
+#test
+#====================
+          </code></pre>
+        </section>
+        <section>
+          <h2>Автоинструментация</h2>
+          <pre style="font-size: 0.4em"><code data-trim class="bash">
+export OTEL_TRACES_EXPORTER="otlp"
+export OTEL_EXPORTER_OTLP_ENDPOINT="your-endpoint"
+export OTEL_NODE_RESOURCE_DETECTORS="env,host,os"
+export OTEL_SERVICE_NAME="your-service-name"
+export NODE_OPTIONS="--require @opentelemetry/auto-instrumentations-node/register"
+node app.js
+          </code></pre>
+        </section>
+        <section>
+          <h2>Тоже самое, но вручную</h2>
+          <pre><code data-trim class="js" data-line-numbers="1-100|1-7|13-18|21-29|33-100">
+// tracing.js
+const process = require(&#39;process&#39;);
+const opentelemetry = require(&#39;@opentelemetry/sdk-node&#39;);
+const { getNodeAutoInstrumentations } = require(&#39;@opentelemetry/auto-instrumentations-node&#39;);
+const { OTLPTraceExporter } = require(&#39;@opentelemetry/exporter-trace-otlp-http&#39;);
+const { Resource } = require(&#39;@opentelemetry/resources&#39;);
+const { SemanticResourceAttributes } = require(&#39;@opentelemetry/semantic-conventions&#39;);
+
+// do not set headers in exporterOptions, the OTel spec recommends setting headers through ENV variables
+// https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/protocol/exporter.md#specifying-headers-via-environment-variables
+
+// highlight-start
+const exporterOptions = {
+  url: &#39;https://ingest.&lt;REGION&gt;.signoz.cloud:443/v1/traces&#39;,
+  headers: {
+      &quot;signoz-access-token&quot;: &quot;&lt;SIGNOZ_INGESTION_KEY&gt;&quot;
+    }
+}
+// highlight-end
+
+const traceExporter = new OTLPTraceExporter(exporterOptions);
+const sdk = new opentelemetry.NodeSDK({
+  traceExporter,
+  instrumentations: [getNodeAutoInstrumentations()],
+  resource: new Resource({
+    // highlight-next-line
+    [SemanticResourceAttributes.SERVICE_NAME]: &#39;&lt;SERVICE_NAME&gt;&#39;
+  })
+});
+
+// initialize the SDK and register with the OpenTelemetry API
+// this enables the API to record telemetry
+sdk.start()
+
+// gracefully shut down the SDK on process exit
+process.on(&#39;SIGTERM&#39;, () =&gt; {
+  sdk.shutdown()
+    .then(() =&gt; console.log(&#39;Tracing terminated&#39;))
+    .catch((error) =&gt; console.log(&#39;Error terminating tracing&#39;, error))
+    .finally(() =&gt; process.exit(0));
+});
+          </code></pre>
+        </section>
+        <section>
+          <h2>Ручные спаны</h2>
+          <pre style="font-size: 0.4em;"><code data-trim class="js" data-line-numbers="1-100|1-4|6-19|21-44">
+const { NodeTracerProvider } = require('@opentelemetry/sdk-trace-node');
+const { SimpleSpanProcessor } = require('@opentelemetry/sdk-trace-base');
+const { ConsoleSpanExporter } = require('@opentelemetry/sdk-trace-base');
+const { trace } = require('@opentelemetry/api');
+
+// Create a tracer provider
+const tracerProvider = new NodeTracerProvider();
+
+// Configure how spans are processed and exported
+tracerProvider.addSpanProcessor(new SimpleSpanProcessor(new ConsoleSpanExporter()));
+
+// Register the provider
+tracerProvider.register();
+
+// Get a tracer
+const tracer = trace.getTracer('example-tracer');
+
+// Create a span
+const span = tracer.startSpan('main-operation');
+
+try {
+  // Business logic here
+  span.addEvent('Processing started');
+  
+  // Nested span example
+  const childSpan = tracer.startSpan('database-query', {
+    parent: span
+  });
+  
+  try {
+    // Simulate database work
+    childSpan.setAttribute('db.query', 'SELECT * FROM users');
+    // ... execute query
+  } finally {
+    childSpan.end();
+  }
+  
+  span.addEvent('Processing completed');
+} catch (error) {
+  span.recordException(error);
+  span.setStatus({ code: trace.SpanStatusCode.ERROR, message: error.message });
+} finally {
+  span.end();
+}
+          </code></pre>
+        </section>
+        <section>
+          <h2>Для браузера</h2>
+          <pre><code data-trim>
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    ...
+    &lt;base href=&quot;/&quot; /&gt;
+    &lt;meta
+      name=&quot;traceparent&quot;
+      content=&quot;00-ab42124a3c573678d4d8b21ba52df3bf-d21f7bc17caa5aba-01&quot;
+    /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;
+          </pre></code>
+        </section>
+        <section>
+          <h2>Выводы</h2>
+          <h3>Хорошо</h3>
+          <ul>
+            <li>Упрощение мониторинга и диагностики</li>
+            <li>Стандартизация</li>
+            <li>Кроссплатформа</li>
+          </ul>
+          <h3>Плохо</h3>
+          <ul>
+            <li>Сыроватый код</li>
+            <li>Тяжело настраивать</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Спасибо</h2>
+          <img style="max-height: 30vh;" src="img/qr.png" alt="">
+          <p>Алексей Золотыx @zolotyh, t.me/zolotyh</p>
+
+
+        </section>
       </div>
     </div>
 
